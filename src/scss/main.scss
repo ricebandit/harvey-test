@@ -1,0 +1,171 @@
+
+
+html, body{
+	font-family: 'Open Sans', sans-serif;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.wrapper{
+	position:absolute;
+	transform-origin:top center;
+	width:800px;
+
+	.button-circle{
+		background:black;
+		border-radius:25px;
+		color:white;
+		display:inline-block;
+		font-size:2.1em;
+		font-weight:800;
+		height: 50px;
+		line-height:1.5em;
+		position:absolute;
+		text-align:center;
+		transform:scale(0.8);
+		width: 50px;
+		transition:100ms;
+
+		&:link{
+			text-decoration:none;
+		}
+
+		&:hover{
+			background:gray;
+			color:black;
+			text-decoration:none;
+
+		}
+	}
+
+	.prev{
+		left:0px;
+
+		letter-spacing: 0.15em;
+
+		transform-origin: right;
+	}
+
+	.next{
+		right:6px;
+		letter-spacing: -0.15em;
+
+		transform-origin: left;
+	}
+
+	.element{
+		display: inline-block;
+	}
+}
+
+#year{
+	margin:29px auto;
+	position:relative;
+	width:400px;
+
+	.element{
+		font-weight:800;
+		margin-left:37%;
+	}
+
+	#label-year{
+		font-size:48px;
+		text-align:center;
+	}
+}
+
+#month{
+	margin-top:30px;
+	position:relative;
+
+	.element{
+		margin-left:63px;
+	}
+
+	.button-circle{
+		margin-top:39%;
+
+		&.kill{
+			display:none !important;
+		}
+	}
+
+	#label-month{
+		font-size:44px;
+		font-weight:800;
+		text-align:center;
+		text-transform:uppercase;
+	}
+
+	.month-grid{
+		width:670px;
+
+		.header{
+			text-align:center;
+		}
+
+		.weekday{
+			display:inline-block;
+			margin-left:-4px;
+			vertical-align:top;
+		}
+
+		.filler{
+			opacity:0;
+			pointer-events:none;
+		}
+
+		.grid-day{
+			border-radius:10px;
+			cursor:pointer;
+			display:block;
+			height:92px;
+			margin-left:4px;
+			margin-top:4px;
+			padding-top: 4px;
+			width:92px;
+
+			background:#999999;
+
+			transition:250ms background;
+
+			&:hover{
+				background:#eeeeee;
+			}
+		}
+
+		.grid-day.selected{
+			background:#666;
+		}
+
+
+		.day-number{
+			background:white;
+			border-radius:10px;
+			font-size:0.7em;
+			height:20px;
+			line-height:21px;
+			margin-left:4px;
+			text-align:center;
+			width:20px;
+
+		}
+
+		.kill{
+			display:none;
+		}
+	}
+}
+
+#form{
+	margin-top:20px;
+	form{
+		text-align:center;
+	}
+
+	#date-selected{
+		font-size:24px;
+		text-align:center;
+	}
+}

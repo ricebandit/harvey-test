@@ -1,0 +1,111 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+.wrapper {
+  position: absolute;
+  transform-origin: top center;
+  width: 800px; }
+  .wrapper .button-circle {
+    background: black;
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    font-size: 2.1em;
+    font-weight: 800;
+    height: 50px;
+    line-height: 1.5em;
+    position: absolute;
+    text-align: center;
+    transform: scale(0.8);
+    width: 50px;
+    transition: 100ms; }
+    .wrapper .button-circle:link {
+      text-decoration: none; }
+    .wrapper .button-circle:hover {
+      background: gray;
+      color: black;
+      text-decoration: none; }
+  .wrapper .prev {
+    left: 0px;
+    letter-spacing: 0.15em;
+    transform-origin: right; }
+  .wrapper .next {
+    right: 6px;
+    letter-spacing: -0.15em;
+    transform-origin: left; }
+  .wrapper .element {
+    display: inline-block; }
+
+#year {
+  margin: 29px auto;
+  position: relative;
+  width: 400px; }
+  #year .element {
+    font-weight: 800;
+    margin-left: 37%; }
+  #year #label-year {
+    font-size: 48px;
+    text-align: center; }
+
+#month {
+  margin-top: 30px;
+  position: relative; }
+  #month .element {
+    margin-left: 63px; }
+  #month .button-circle {
+    margin-top: 39%; }
+    #month .button-circle.kill {
+      display: none !important; }
+  #month #label-month {
+    font-size: 44px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase; }
+  #month .month-grid {
+    width: 670px; }
+    #month .month-grid .header {
+      text-align: center; }
+    #month .month-grid .weekday {
+      display: inline-block;
+      margin-left: -4px;
+      vertical-align: top; }
+    #month .month-grid .filler {
+      opacity: 0;
+      pointer-events: none; }
+    #month .month-grid .grid-day {
+      border-radius: 10px;
+      cursor: pointer;
+      display: block;
+      height: 92px;
+      margin-left: 4px;
+      margin-top: 4px;
+      padding-top: 4px;
+      width: 92px;
+      background: #999999;
+      transition: 250ms background; }
+      #month .month-grid .grid-day:hover {
+        background: #eeeeee; }
+    #month .month-grid .grid-day.selected {
+      background: #666; }
+    #month .month-grid .day-number {
+      background: white;
+      border-radius: 10px;
+      font-size: 0.7em;
+      height: 20px;
+      line-height: 21px;
+      margin-left: 4px;
+      text-align: center;
+      width: 20px; }
+    #month .month-grid .kill {
+      display: none; }
+
+#form {
+  margin-top: 20px; }
+  #form form {
+    text-align: center; }
+  #form #date-selected {
+    font-size: 24px;
+    text-align: center; }
